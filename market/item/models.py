@@ -20,3 +20,6 @@ class Item(models.Model):
     is_sold = models.BooleanField(default=False)
     create_by = models.ForeignKey(User, related_name='items', on_delete=models.CASCADE)
     create_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
